@@ -1,10 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import telebot
-import io
 import json
 import mysql.connector
-
 
 dir_credenciais = 'credenciais.json'
 with open(dir_credenciais, 'r') as arquivo:
@@ -15,9 +13,6 @@ bot = telebot.TeleBot(str(token))
 
 id_arthur = credenciais['id_arthur']
 id_nuvem = -1001632970767 #backup de videoaulas e outros
-
-global banco
-global c
 
 def db():
     try:
@@ -37,7 +32,7 @@ c = banco.cursor()
 
 
 bot = telebot.TeleBot(token)
-id_nuvem = -1001632970767
+
 
 url = 'https://aimore.net/placas/placa_S-1.html'
 
